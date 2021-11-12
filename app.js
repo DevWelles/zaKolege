@@ -22,7 +22,7 @@ const brojGaraza1 = () => { //ovo je obična funkcija napisana u obliku arrow fu
 
 const brojGaraza2 = () => { 
   let userInput = Number(prompt('Unesite broj garaza(N): ')); 
-  while (isNaN(userInput) || userInput == ' ' || userInput <= 0) { // provjevaravamo da li je userInput NaN jer znamo da JavaScript u funkciji Number() sve pretvara u typeof "number" i ako user utipka neki string onda ce biti convertan u NaN, a NaN je tipa "number" u javascriptu
+  while (!(isNaN(userInput)) || userInput == ' ' || userInput <= 0) { // provjevaravamo da li je userInput NaN jer znamo da JavaScript u funkciji Number() sve pretvara u typeof "number" i ako user utipka neki string onda ce biti convertan u NaN, a NaN je tipa "number" u javascriptu
                                                                   // još sam dodatno stavio i da pokrijem edge cases u slucaju da user utipka praznne ili nulu i negativne brojeve
                                                                   // probajte upisati decimalan broj i vidjeti kakav je ispis. Što mislite zašto je takav? :)
     console.log('Molimo ispravno unesite broj!')
